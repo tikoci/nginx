@@ -6,8 +6,8 @@ FROM nginx:alpine
 # openssl req -x509 -newkey rsa:4096 -keyout self.key.pem -out self.cert.pem -sha256 -days 1024 -nodes -subj "/C=AQ/O=Unsecured Worldwide/OU=Self Signed/CN=router.lan"
 
 # "build time" arguments to override container image default ENVs
-ARG defaultProxyPort=443
-ARG defaultContainerGateway=172.80.5.1
+ARG defaultProxyPort=6443
+ARG defaultContainerGateway=172.18.5.1
 ARG defaultRouterHttpsPort=443
 ARG defaultProxyHostname=router.lan
 ARG defaultX509AuthMode=off
